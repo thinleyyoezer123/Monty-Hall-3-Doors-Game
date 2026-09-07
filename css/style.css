@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #181925, #101018);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 550px;
+  }
+  
+  .game-card {
+    background-color: #242536;
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    color: #ffd700;
+    margin-bottom: 6px;
+  }
+  
+  .instruction-text {
+    font-size: 1rem;
+    color: #00d2ff;
+    font-weight: 600;
+    margin-bottom: 25px;
+    min-height: 48px;
+  }
+  
+  /* Doors Grid */
+  .doors-grid {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .door-btn {
+    flex: 1;
+    background-color: #31334a;
+    border: 3px solid #ffd700;
+    border-radius: 12px;
+    padding: 20px 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .door-btn:hover:not(:disabled) {
+    transform: translateY(-5px);
+    background-color: #3e405e;
+  }
+  
+  .door-title {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 0.95rem;
+  }
+  
+  .door-reveal {
+    font-size: 2.8rem;
+  }
+  
+  .door-badge {
+    position: absolute;
+    top: -12px;
+    background-color: #ff9800;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 10px;
+    text-transform: uppercase;
+  }
+  
+  .door-badge.switch-badge {
+    background-color: #00d2ff;
+    color: #000000;
+  }
+  
+  /* Step 2 Door Highlight States */
+  .door-btn.option-stay {
+    border-color: #ff9800;
+    box-shadow: 0 0 12px rgba(255, 152, 0, 0.4);
+  }
+  
+  .door-btn.option-switch {
+    border-color: #00d2ff;
+    box-shadow: 0 0 12px rgba(0, 210, 255, 0.4);
+  }
+  
+  .door-btn.host-opened {
+    background-color: #1a1a24;
+    border-color: #444455;
+    opacity: 0.5;
+  }
+  
+  .door-btn.winner {
+    border-color: #00ff88;
+    background-color: #184232;
+  }
+  
+  .door-btn.loser {
+    border-color: #ff4d4d;
+    background-color: #421818;
+  }
+  
+  .door-btn:disabled {
+    cursor: default;
+  }
+  
+  /* Results & Controls */
+  .result-msg {
+    font-size: 1.1rem;
+    font-weight: bold;
+    min-height: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .win-text { color: #00ff88; }
+  .lose-text { color: #ff4d4d; }
+  
+  .reset-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #111118;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .reset-btn:hover {
+    background-color: #e6c200;
+  }
+  
+  /* Local Data Dashboard */
+  .stats-section {
+    border-top: 1px solid #3d3e56;
+    padding-top: 20px;
+    margin-top: 10px;
+  }
+  
+  .stats-section h2 {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 12px;
+  }
+  
+  .stats-grid {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .stat-box {
+    flex: 1;
+    background-color: #191a26;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+  }
+  
+  .stat-box h3 {
+    font-size: 0.9rem;
+    color: #ffd700;
+    margin-bottom: 6px;
+  }
+  
+  .win-rate {
+    margin-top: 4px;
+    color: #00ff88;
+  }
+  
+  .clear-btn {
+    background: none;
+    border: none;
+    color: #8888aa;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .clear-btn:hover {
+    color: #ff6b6b;
+  }
+  
+  .hidden {
+    display: none !important;
+  }

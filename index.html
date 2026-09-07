@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monty Hall 3-Door Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="container">
+    <div class="game-card">
+      <h1>The Monty Hall Game</h1>
+      <p id="instruction" class="instruction-text">Step 1: Tap any door to pick it!</p>
+
+      <!-- Doors Grid -->
+      <div class="doors-grid">
+        <button class="door-btn" data-index="0" id="door-0">
+          <span class="door-title">Door 1</span>
+          <span class="door-reveal" id="reveal-0">🚪</span>
+          <span class="door-badge hidden" id="badge-0"></span>
+        </button>
+
+        <button class="door-btn" data-index="1" id="door-1">
+          <span class="door-title">Door 2</span>
+          <span class="door-reveal" id="reveal-1">🚪</span>
+          <span class="door-badge hidden" id="badge-1"></span>
+        </button>
+
+        <button class="door-btn" data-index="2" id="door-2">
+          <span class="door-title">Door 3</span>
+          <span class="door-reveal" id="reveal-2">🚪</span>
+          <span class="door-badge hidden" id="badge-2"></span>
+        </button>
+      </div>
+
+      <!-- Result Area -->
+      <p id="result-msg" class="result-msg"></p>
+      <button id="reset-btn" class="reset-btn hidden">Play Again</button>
+
+      <!-- Local Database Dashboard -->
+      <section class="stats-section">
+        <h2>📊 Strategy Statistics (Stored Data)</h2>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <h3>When Staying</h3>
+            <p>Wins: <span id="stay-wins">0</span> / <span id="stay-total">0</span></p>
+            <p class="win-rate">Win Rate: <strong id="stay-rate">0%</strong></p>
+          </div>
+          <div class="stat-box">
+            <h3>When Switching</h3>
+            <p>Wins: <span id="switch-wins">0</span> / <span id="switch-total">0</span></p>
+            <p class="win-rate">Win Rate: <strong id="switch-rate">0%</strong></p>
+          </div>
+        </div>
+        <button id="clear-stats-btn" class="clear-btn">Reset Stored Data</button>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
