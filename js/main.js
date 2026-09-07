@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const isWin = clickedIndex === prizeIndex;
           instructionEl.textContent = "Game Over!";
           if (isWin) {
-            resultMsgEl.textContent = `🎉 YOU WON $1,000,000! (${didSwitch ? "Switching" : "Staying"} worked!)`;
+            resultMsgEl.textContent = `🪎 YOU WON $1,000,000! (${didSwitch ? "Switching" : "Staying"} worked!)`;
             resultMsgEl.classList.add("win-text");
           } else {
             resultMsgEl.textContent = `❌ Bad Luck! You got a goat! (${didSwitch ? "Switching" : "Staying"} failed)`;
